@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>水水的博客</title>
+    <link>https://blog.cbnac.com/blog/</link>
+    <description>记录 AetherOS、Rust、系统编程、阅读与生活。</description>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 01 Nov 2026 00:00:00 +0800</lastBuildDate>
+    <item>
+      <title>把内核之上的那一层，重写一遍</title>
+      <link>https://blog.cbnac.com/blog/posts/aetheros.html</link>
+      <guid>https://blog.cbnac.com/blog/posts/aetheros.html</guid>
+      <pubDate>Sun, 01 Nov 2026 00:00:00 +0800</pubDate>
+      <description>AetherOS 为什么选择 Linux 内核 + 全自研 Rust 用户态，以及这套系统现在真实走到了哪一步。</description>
+    </item>
+    <item>
+      <title>把个人博客做成一块可长期维护的岩层</title>
+      <link>https://blog.cbnac.com/blog/posts/static-blog.html</link>
+      <guid>https://blog.cbnac.com/blog/posts/static-blog.html</guid>
+      <pubDate>Sun, 01 Nov 2026 00:00:00 +0800</pubDate>
+      <description>从 Vite SPA 到静态博客：可读性、首屏速度与可迁移性，比“看起来酷”更重要。</description>
+    </item>
+    <item>
+      <title>可验证，而不是“我觉得没问题”</title>
+      <link>https://blog.cbnac.com/blog/posts/notes.html</link>
+      <guid>https://blog.cbnac.com/blog/posts/notes.html</guid>
+      <pubDate>Sun, 01 Nov 2026 00:00:00 +0800</pubDate>
+      <description>关于测试、门禁、像素回归和诚实的边界。</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>可验证，而不是“我觉得没问题” — 水水的博客</title>
+  <meta name="description" content="关于测试、门禁、像素回归和诚实的边界：一个系统项目怎样让结论能被别人复跑。">
+  <link rel="canonical" href="https://blog.cbnac.com/blog/posts/notes.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="可验证，而不是“我觉得没问题”">
+  <meta property="og:description" content="测试、门禁、像素回归，以及诚实的边界。">
+  <meta property="og:image" content="https://blog.cbnac.com/blog/assets/og-cover.png">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<header class="top"><div class="wrap nav">
+  <a class="brand" href="../index.html"><span class="brand-mark">水</span><span>水水的博客</span></a>
+  <nav class="nav-links" aria-label="主导航">
+    <a href="../index.html">首页</a><a href="../archive.html">归档</a><a href="../about.html">关于</a>
+    <a class="github-link" href="https://github.com/qwert702" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </nav>
+</div></header>
+<main id="main">
+  <article class="article">
+    <header>
+      <div class="eyebrow">笔记 · 工程</div>
+      <h1>可验证，而不是“我觉得没问题”</h1>
+      <p class="meta">2026-11-01 · 6 分钟阅读</p>
+    </header>
+    <p>做系统项目最危险的时刻，不是编译失败，而是所有东西看起来都正常。界面能开、命令能跑、演示能过——但这些“看起来”并不等于结论可以被别人复现。</p>
+    <h2>把结论写成命令</h2>
+    <p>一个可验证的结论应该长这样：</p>
+    <pre><code>cargo test --workspace --offline --locked
+python scripts/gates.py
+python scripts/shot-diff.py verify</code></pre>
+    <p>而不是“我试过了，没问题”。命令的价值在于：换一个人、换一台机器、换一个时间，仍然能得到同样的判断。</p>
+    <h2>负向用例比正向用例更重要</h2>
+    <p>签名校验不只要证明“正确签名能过”，还要证明“篡改后必须失败”；权限闸门不只要证明“授权能执行”，还要证明“未授权不能执行”；CI 不只要证明“代码能编译”，还要证明“干净 checkout 也能过”。</p>
+    <p>只测 happy path，会把“没有报错”误当成“安全”。</p>
+    <h2>诚实标注未验证</h2>
+    <p>物理机没跑，就写“未验证”；生产更新源没部署，就写“未部署”；真模型没接，就写“协议层已验证”。这不是自我否定，而是让后来的人知道该从哪里继续。</p>
+    <blockquote>“判据全绿”不等于“做完了”。前者是证据，后者是判断。</blockquote>
+    <p class="back"><a href="../index.html">← 回到首页</a></p>
+  </article>
+</main>
+<footer class="footer"><div class="wrap footer-row">
+  <span>© 2026 水水的博客</span>
+  <span><a href="https://github.com/qwert702" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="../rss.xml">RSS</a></span>
+</div></footer>
+<script src="../assets/app.js" defer></script>
+</body>
+</html>

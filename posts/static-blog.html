@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>把个人博客做成一块可长期维护的岩层 — 水水的博客</title>
+  <meta name="description" content="从 Vite SPA 到静态博客：可读性、首屏速度与可迁移性，比“看起来酷”更重要。">
+  <link rel="canonical" href="https://blog.cbnac.com/blog/posts/static-blog.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="把个人博客做成一块可长期维护的岩层">
+  <meta property="og:description" content="一次博客改造的设计取舍：静态、可读、可迁移。">
+  <meta property="og:image" content="https://blog.cbnac.com/blog/assets/og-cover.png">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<header class="top"><div class="wrap nav">
+  <a class="brand" href="../index.html"><span class="brand-mark">水</span><span>水水的博客</span></a>
+  <nav class="nav-links" aria-label="主导航">
+    <a href="../index.html">首页</a><a href="../archive.html">归档</a><a href="../about.html">关于</a>
+    <a class="github-link" href="https://github.com/qwert702" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </nav>
+</div></header>
+<main id="main">
+  <article class="article">
+    <header>
+      <div class="eyebrow">设计 · 博客</div>
+      <h1>把个人博客做成一块可长期维护的岩层</h1>
+      <p class="meta">2026-11-01 · 5 分钟阅读</p>
+    </header>
+    <p>旧博客是一个 Vite + React 的单页应用。它能跑，但首页依赖一段远程视频，正文靠 JavaScript 渲染，搜索引擎和分享卡片都很难真正读到内容。对一个准备长期写东西的博客来说，这不是一个合适的底座。</p>
+    <h2>这次改造只坚持三件事</h2>
+    <ol>
+      <li><strong>内容先于特效。</strong> 文章页必须是普通 HTML，禁用 JavaScript 也能读；</li>
+      <li><strong>首屏要轻。</strong> 不再自动播放远程视频，改用静态封面与排版本身建立气质；</li>
+      <li><strong>可迁移。</strong> 文章以 Markdown/HTML 保存，换生成器、换服务器都不需要重写内容。</li>
+    </ol>
+    <h2>视觉：地质与时间</h2>
+    <p>原来的 tagline 是“时光镌刻于层岩之中”。这次把它变成了真正的视觉语言：暖白岩层、墨色文字、单一矿物青强调色，衬线标题配高可读正文。没有大渐变，没有无意义的玻璃拟态。</p>
+    <p>好设计不是把元素堆满，而是让读者忘记界面，直接进入文字。</p>
+    <h2>技术选择</h2>
+    <p>当前版本使用静态 HTML/CSS/JS：没有运行时框架、没有客户端路由、没有构建依赖。文章规模变大后，可以平滑迁移到 Astro 或 Hugo；页面结构和 URL 不变，迁移成本可控。</p>
+    <p>这也是一种“可逆优先”：先用最简单的结构上线，再根据真实写作量决定要不要引入生成器。</p>
+    <p class="back"><a href="../index.html">← 回到首页</a></p>
+  </article>
+</main>
+<footer class="footer"><div class="wrap footer-row">
+  <span>© 2026 水水的博客</span>
+  <span><a href="https://github.com/qwert702" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="../rss.xml">RSS</a></span>
+</div></footer>
+<script src="../assets/app.js" defer></script>
+</body>
+</html>

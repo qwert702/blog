@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AetherOS：把内核之上的那一层，重写一遍 — 水水的博客</title>
+  <meta name="description" content="AetherOS 为什么选择 Linux 内核 + 全自研 Rust 用户态，以及这套系统现在真实走到了哪一步。">
+  <link rel="canonical" href="https://blog.cbnac.com/blog/posts/aetheros.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="AetherOS：把内核之上的那一层，重写一遍">
+  <meta property="og:description" content="Linux 内核 + 全自研 Rust 用户态，一个自研桌面系统的真实边界。">
+  <meta property="og:image" content="https://blog.cbnac.com/blog/assets/og-cover.png">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BlogPosting","headline":"AetherOS：把内核之上的那一层，重写一遍","datePublished":"2026-11-01","author":{"@type":"Person","name":"qwert702","url":"https://github.com/qwert702"},"mainEntityOfPage":"https://blog.cbnac.com/blog/posts/aetheros.html"}
+  </script>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<header class="top"><div class="wrap nav">
+  <a class="brand" href="../index.html"><span class="brand-mark">水</span><span>水水的博客</span></a>
+  <nav class="nav-links" aria-label="主导航">
+    <a href="../index.html">首页</a><a href="../archive.html">归档</a><a href="../about.html">关于</a>
+    <a class="github-link" href="https://github.com/qwert702" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </nav>
+</div></header>
+<main id="main">
+  <article class="article">
+    <header>
+      <div class="eyebrow">项目 · AetherOS</div>
+      <h1>把内核之上的那一层，重写一遍</h1>
+      <p class="meta">2026-11-01 · 8 分钟阅读 · <a href="https://github.com/qwert702/AetherOS" target="_blank" rel="noopener noreferrer">源码</a></p>
+    </header>
+    <p>AetherOS 是一个不太“正常”的操作系统项目：它不重写内核，而是把 Linux 内核之上的那一层——PID 1、窗口合成器、终端、中文输入法、AI 中枢——从零写了一遍。</p>
+    <h2>为什么不是“再写一个内核”</h2>
+    <p>重写内核很酷，但它不解决用户真正感知到的问题。Android 和 ChromeOS 都用 Linux 内核，产品差异却发生在用户态。把几年时间花在一个跑不了真实软件的半成品内核上，换来的可能只是“内核是自己写的”这句话。</p>
+    <p>所以这个项目把力气放在更稀缺的地方：让自研的桌面、终端、输入法和 AI 真的能装真实 Linux 软件，真的能从 ISO 启动，真的能被别人复跑验证。</p>
+    <h2>现在有什么</h2>
+    <ul>
+      <li>7 个 Rust crate，约 5.2 万行代码；</li>
+      <li>自研 PID 1、fbdev 合成器、PTY/VT 终端、中文输入法、安装器与应用包格式；</li>
+      <li>L0–L3 权限闸门、确认令牌、审计日志；</li>
+      <li>QEMU / VirtualBox / VMware 启动验证，以及 57 档逐像素回归；</li>
+      <li>约 41 MB 的可引导 ISO。</li>
+    </ul>
+    <p>这些数字不是用来堆简历的。它们背后是一个更重要的判断：<strong>“能跑”与“可验证”之间，隔着一整套测试、门禁和诚实的边界说明。</strong></p>
+    <h2>还没做到什么</h2>
+    <p>物理机、真 GPU、真外设还没有系统验收；Wayland/DRM 仍是一个待决策的方向；已发布的 v0.1.1 ISO 还存在装机限制，需要重建产物。项目文档里把这些写成“未验证”，而不是“应该可以”。</p>
+    <blockquote>一个标了已完成但没验证的项，比一个明确未完成的项更危险。</blockquote>
+    <p>如果你对“从内核之上重写用户态”这件事感兴趣，可以从 GitHub 仓库和文档入口开始。欢迎 Issue、PR，也欢迎只是把它跑起来看看。</p>
+    <p class="back"><a href="../index.html">← 回到首页</a> · <a href="https://github.com/qwert702/AetherOS" target="_blank" rel="noopener noreferrer">GitHub 仓库 →</a></p>
+  </article>
+</main>
+<footer class="footer"><div class="wrap footer-row">
+  <span>© 2026 水水的博客</span>
+  <span><a href="https://github.com/qwert702" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="../rss.xml">RSS</a></span>
+</div></footer>
+<script src="../assets/app.js" defer></script>
+</body>
+</html>
