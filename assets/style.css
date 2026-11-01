@@ -135,12 +135,24 @@ h1 em { font-style: normal; color: var(--teal); }
 .footer a { color: var(--muted); }
 
 @media (max-width: 760px) {
-  .wrap { width: min(100% - 28px, 1080px); }
-  .nav { align-items: flex-start; }
-  .nav-links { justify-content: flex-end; gap: .55rem; font-size: .85rem; }
-  .nav-links a { font-size: .85rem; }
+  body { overflow-x: hidden; }
+  .wrap { width: calc(100% - 28px); }
+  .nav { flex-wrap: wrap; align-items: center; row-gap: .55rem; }
+  .nav-links {
+    order: 2;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: .9rem;
+    padding-top: .55rem;
+    border-top: 1px solid var(--line);
+  }
+  .nav-links a { font-size: .82rem; }
+  .github-link { padding: .24rem .62rem; }
   .post-card, .about-card, .github-card { grid-column: 1 / -1; }
   .hero { padding-top: 3rem; }
+  .hero h1, .lede { overflow-wrap: anywhere; }
+  .hero-actions .btn { flex: 1 0 100%; width: 100%; justify-content: center; }
   .archive-list li { display: block; }
   .archive-list time { display: block; margin-top: .2rem; }
 }
