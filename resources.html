@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>资料 — 水水的博客</title>
+  <meta name="description" content="旧站资料存档：Claude Code 安装教程、基础指令、数学课件与 Python 教程。">
+  <link rel="canonical" href="https://blog.cbnac.com/blog/resources.html">
+  <meta property="og:title" content="资料 — 水水的博客">
+  <meta property="og:description" content="Claude Code、数学课件与 Python 教程等旧站资料。">
+  <meta property="og:image" content="https://blog.cbnac.com/blog/assets/og-cover.png">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<header class="top"><div class="wrap nav">
+  <a class="brand" href="index.html"><span class="brand-mark">水</span><span>水水的博客</span></a>
+  <nav class="nav-links" aria-label="主导航">
+    <a href="index.html">首页</a><a href="archive.html">归档</a><a href="projects.html">项目</a><a href="resources.html" aria-current="page">资料</a><a href="about.html">关于</a>
+    <a class="github-link" href="https://github.com/qwert702" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </nav>
+</div></header>
+<main id="main">
+  <article class="article">
+    <header>
+      <div class="eyebrow">Resources · 旧站存档</div>
+      <h1>资料还在。</h1>
+      <p class="lede">旧站的资源页、数学课件和 Python 教程都保留在站点里；这里把它们重新放在一个入口下，并保留原来的地址跳转。</p>
+    </header>
+
+    <h2 id="claude-code">Claude Code 安装教程</h2>
+    <p>旧站资源页的第一篇。安装命令如下：</p>
+    <pre><code>npm i -g @anthropic-ai/claude-code@latest</code></pre>
+    <p>配置与安装截图（旧站原图）：</p>
+    <img src="assets/resources/claude-code-cover.png" alt="Claude Code 安装教程封面" loading="lazy">
+    <img src="assets/resources/claude-code-config.png" alt="Claude Code 配置截图" loading="lazy">
+    <p>旧站还提供了 CC-Switch 的 Windows / macOS / Linux 安装包入口，原下载文件当前不在服务器上，建议从官方页面获取：</p>
+    <p><a href="https://ccswitch.io/zh/" target="_blank" rel="noopener noreferrer">ccswitch.io/zh →</a></p>
+    <img src="assets/resources/claude-code-screenshot.png" alt="Claude Code 使用截图" loading="lazy">
+
+    <h2 id="basics">Claude Code 基础指令详解</h2>
+    <p>旧站整理过的常用指令速查，保留在这里：</p>
+    <div class="command-grid">
+      <div class="command-card"><code>/help</code><span>显示所有可用命令的帮助信息。</span></div>
+      <div class="command-card"><code>/init</code><span>在项目中初始化 CLAUDE.md 配置文件，扫描项目结构并生成规范说明。</span></div>
+      <div class="command-card"><code>/add</code><span>把文件加入上下文，支持通配符，例如 <code>/add src/**/*.ts</code>。</span></div>
+      <div class="command-card"><code>/drop</code><span>从上下文中移除指定文件，释放空间。</span></div>
+      <div class="command-card"><code>/review</code><span>审查当前 diff，找出 bug、性能问题和代码异味；<code>/review --fix</code> 可自动修复。</span></div>
+      <div class="command-card"><code>/fix</code><span>尝试自动修复代码中的问题。</span></div>
+      <div class="command-card"><code>/plan</code><span>进入计划模式，先探索代码库、设计方案，再开始写代码。</span></div>
+      <div class="command-card"><code>/ls</code><span>列出当前上下文中所有已添加文件及状态。</span></div>
+      <div class="command-card"><code>/search</code><span>在项目中搜索代码，支持正则，例如 <code>/search function getUser</code>。</span></div>
+      <div class="command-card"><code>/compress</code><span>压缩当前对话上下文，释放 token 空间。</span></div>
+      <div class="command-card"><code>/clear</code><span>清空当前会话，开始新对话。</span></div>
+      <div class="command-card"><code>/doctor</code><span>检查 Claude Code 环境与配置。</span></div>
+    </div>
+
+    <h2>数学课件</h2>
+    <p>旧站的数学课件入口仍然可用，包含导数、手写识别与练习题等内容：</p>
+    <p><a class="btn" href="https://blog.cbnac.com/math/">打开数学课件 →</a></p>
+
+    <h2>Python 教程</h2>
+    <p>旧站的 Python 教程共 28 章，仍在原路径：</p>
+    <p><a class="btn" href="https://blog.cbnac.com/tutorials/python/">打开 Python 教程 →</a></p>
+
+    <hr>
+    <p class="back"><a href="index.html">← 回到首页</a> · <a href="https://github.com/qwert702" target="_blank" rel="noopener noreferrer">GitHub @qwert702 →</a></p>
+  </article>
+</main>
+<footer class="footer"><div class="wrap footer-row">
+  <span>© 2026 水水的博客 · 旧站资料存档</span>
+  <span><a href="https://github.com/qwert702" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="rss.xml">RSS</a></span>
+</div></footer>
+<script src="assets/app.js" defer></script>
+</body>
+</html>
